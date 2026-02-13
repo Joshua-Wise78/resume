@@ -1,22 +1,22 @@
 #set page(
   paper: "us-letter",
-  margin: (x: 0.5in, y: 0.4in),
+  margin: (x: 0.5in, y: 0.5in),
 )
 #set text(
   font: "Linux Libertine",
   size: 10pt,
   lang: "en"
 )
-#set par(leading: 0.45em)
+#set par(leading: 0.5em)
 
 // --- Helper Functions ---
 
 #let section-header(title) = {
-  v(6pt)
-  text(weight: "bold", size: 10pt, upper(title))
-  v(-5pt)
+  v(8pt)
+  text(weight: "bold", size: 11pt, upper(title))
+  v(-6pt)
   line(length: 100%, stroke: 0.5pt)
-  v(3pt)
+  v(4pt)
 }
 
 #let resume-item(
@@ -26,7 +26,6 @@
   location: "",
   content: none
 ) = {
-  // Grid layout for the header line of each item
   grid(
     columns: (1fr, auto),
     row-gutter: 0em,
@@ -41,7 +40,7 @@
 // --- Header ---
 
 #align(center)[
-  #text(size: 16pt, weight: "bold")[JOSHUA WISE] \
+  #text(size: 20pt, weight: "bold")[JOSHUA WISE] \
   Sidney, Ohio | (937)-622-0063 | #link("mailto:wise.113@wright.edu")[wise.113\@wright.edu] \
   #link("https://linkedin.com/in/joshua-wise-970294293")[linkedin.com/in/joshua-wise] | #link("https://github.com/Joshua-Wise78")[github.com/Joshua-Wise78]
 ]
@@ -56,7 +55,7 @@
   date: "Expected Dec 2026",
   location: "Fairborn, Ohio",
   content: [
-    *Relevant Coursework:* Data Structures, OS Internals, Cyber Security
+    *Relevant Coursework:* Data Structures, OS Internals, Cyber Security, Special Topics.
   ]
 )
 
@@ -66,7 +65,7 @@
 
 #pad(top: 0em)[
   *Languages:* Python, Java, C/C++, JavaScript, HTML/CSS, SQL, Bash \
-  *Frameworks & Tools:* React, Next.js, Flask, FastAPI, Git, Docker, Postgres, MariaDB, Firebase, Vim, Power BI, MPI
+  *Frameworks & Tools:* React, Next.js, Flask, FastAPI, Git, Docker, Postgres, MariaDB, Firebase, Vim, Power BI
 ]
 
 // --- Experience ---
@@ -80,15 +79,15 @@
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
-    - Collaborating with aerospace engineers to develop software solutions for modeling aerospace components.
-    - Leveraging Python and OpenVSP to build, optimize, and maintain simulation applications.
+    - Developing a user-friendly graphical interface and Python workflow to integrate with open-source APIs for aerospace simulation.
+    - Collaborating within a multidisciplinary team to validate model outputs and achieve technical milestones.
   ]
 )
 
 #resume-item(
   title: "Air Force Research Laboratory (AFRL)",
   subtitle: "Year-round Intern | Full-stack & Data Analysis",
-  date: "Mar 2024 - Oct 2025",
+  date: "Mar 2024 - April 2025",
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
@@ -105,8 +104,8 @@
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
-    - Leading a 50-student lab on Object-Oriented Programming; coordinating grading and deadlines with staff.
-    - Demonstrating live coding workflows using Git and IntelliJ to enhance student understanding of development environments.
+    - Lead a 50-student lab on Object-Oriented Programming; coordinate grading and deadlines with staff.
+    - Demonstrate live coding workflows using Git and IntelliJ to enhance student understanding of development environments.
   ]
 )
 
@@ -115,22 +114,8 @@
 #section-header("Projects")
 
 #resume-item(
-  title: "Box-Notes",
-  subtitle: "React, Tailwind, Python, FastAPI, Postgres",
-  date: "Present",
-  location: "",
-  content: [
-    #set list(marker: [•])
-    - Developed a responsive personal note-taking application using React and Tailwind CSS.
-    - Implemented a high-performance backend with FastAPI and Postgres for efficient data storage.
-  ]
-)
-
-
-
-#resume-item(
   title: "Cooking App",
-  subtitle: "Next.js, FastAPI, MariaDB",
+  subtitle: "Next.js, FastAPI, MariaDB, GitHub",
   date: "Present",
   location: "",
   content: [
@@ -158,5 +143,5 @@
 
 #pad(top: 0em)[
   #set list(marker: [•])
-  - *eSports Officer (Secretary):* Managed cabinet schedules and tracked club membership growth (2023-2024).
+  - *Wright State eSports:* Served as *Secretary* (2023-24) managing club logistics, and *Team Captain*, leading strategy for a 5-person competitive team.
 ]
