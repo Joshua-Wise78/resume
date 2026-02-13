@@ -1,22 +1,22 @@
 #set page(
   paper: "us-letter",
-  margin: (x: 0.5in, y: 0.4in), 
+  margin: (x: 0.5in, y: 0.4in),
 )
 #set text(
   font: "Linux Libertine",
-  size: 9.5pt, 
+  size: 10pt,
   lang: "en"
 )
-#set par(leading: 0.5em) 
+#set par(leading: 0.45em)
 
 // --- Helper Functions ---
 
 #let section-header(title) = {
-  v(5pt) 
-  text(weight: "bold", size: 10.5pt, upper(title))
-  v(-6pt)
+  v(6pt)
+  text(weight: "bold", size: 10pt, upper(title))
+  v(-5pt)
   line(length: 100%, stroke: 0.5pt)
-  v(2pt)
+  v(3pt)
 }
 
 #let resume-item(
@@ -26,24 +26,24 @@
   location: "",
   content: none
 ) = {
-  v(2pt) 
+  // Grid layout for the header line of each item
   grid(
     columns: (1fr, auto),
-    row-gutter: 0.5em,
+    row-gutter: 0em,
     text(weight: "bold", title), align(right, date),
     text(style: "italic", subtitle), align(right, text(style: "italic", location))
   )
   if content != none {
-    pad(left: 0.5em, top: 0.1em, bottom: 0.1em, content) 
+    pad(left: 0em, top: 0.2em, bottom: 0.2em, content)
   }
 }
 
 // --- Header ---
 
 #align(center)[
-  #text(size: 18pt, weight: "bold")[JOSHUA WISE] \
-  1174 Superior Court, Sidney, Ohio 45365 | (937)-622-0063 \
-  #link("mailto:wise.113@wright.edu")[wise.113\@wright.edu] | #link("https://linkedin.com/in/joshua-wise-970294293")[linkedin.com/in/joshua-wise-970294293] | #link("https://github.com/Joshua-Wise78")[github.com/Joshua-Wise78]
+  #text(size: 16pt, weight: "bold")[JOSHUA WISE] \
+  Sidney, Ohio | (937)-622-0063 | #link("mailto:wise.113@wright.edu")[wise.113\@wright.edu] \
+  #link("https://linkedin.com/in/joshua-wise-970294293")[linkedin.com/in/joshua-wise] | #link("https://github.com/Joshua-Wise78")[github.com/Joshua-Wise78]
 ]
 
 // --- Education ---
@@ -52,41 +52,61 @@
 
 #resume-item(
   title: "Wright State University",
-  subtitle: "Bachelor of Science in Computer Science",
-  date: "Sep 2023 - Dec 2026",
+  subtitle: "B.S. in Computer Science",
+  date: "Expected Dec 2026",
   location: "Fairborn, Ohio",
   content: [
-    *Relevant Coursework:* Mobile Development, Intro to Cyber Security, Data Structures, OS Internals, Java I-II, Special Topics.
+    *Relevant Coursework:* Data Structures, OS Internals, Cyber Security
   ]
 )
+
+// --- Skills ---
+
+#section-header("Technical Skills")
+
+#pad(top: 0em)[
+  *Languages:* Python, Java, C/C++, JavaScript, HTML/CSS, SQL, Bash \
+  *Frameworks & Tools:* React, Next.js, Flask, FastAPI, Git, Docker, Postgres, MariaDB, Firebase, Vim, Power BI, MPI
+]
 
 // --- Experience ---
 
 #section-header("Experience")
 
 #resume-item(
-  title: "Teaching Assistant",
-  subtitle: "Java III Lab Leader",
-  date: "Aug 2024 - Present",
+  title: "Raider Immersion Program - Booz Allen Hamilton",
+  subtitle: "Year-round Intern",
+  date: "Dec 2025 - Present",
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
-    - Lead a lab of 50 students, teaching core concepts of Object Oriented Programming.
-    - Utilize Visual Studio Code, IntelliJ, and Git to manage workflows and display in-class code to students.
-    - Collaborate with three other lab assistants to solve in-class problems, delegate grading, and schedule due dates.
+    - Collaborating with aerospace engineers to develop software solutions for modeling aerospace components.
+    - Leveraging Python and OpenVSP to build, optimize, and maintain simulation applications.
   ]
 )
 
 #resume-item(
   title: "Air Force Research Laboratory (AFRL)",
-  subtitle: "Year-round Intern | Full-stack/Data Analysis",
-  date: "May 2024 - Aug 2025",
+  subtitle: "Year-round Intern | Full-stack & Data Analysis",
+  date: "Mar 2024 - Oct 2025",
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
-    - *March 2024 - April 2025:* Developed an internship portal using Flask for backend management (authentication, redirects) and HTML/CSS/JS for frontend. Migrated Google Datastore to Firestore for consistency.
-    - *April 2025 - October 2025:* Managed internal AFRL information for customer satisfaction; developed SharePoint models to display costs/usage.
-    - Utilized VS Code, Python, HTML/CSS/JS, Firebase, Datastore, Power BI, and DAX queries.
+    - Built a full-stack internship portal using Flask, HTML/JS, and Firebase; migrated data from Datastore to Firestore.
+    - Managed internal datasets and developed Power BI dashboards with DAX to visualize operational costs and usage.
+    - Automated data workflows to improve customer satisfaction and information accessibility.
+  ]
+)
+
+#resume-item(
+  title: "Wright State University",
+  subtitle: "Teaching Assistant & Java III Lab Leader",
+  date: "Aug 2024 - Present",
+  location: "Fairborn, Ohio",
+  content: [
+    #set list(marker: [•])
+    - Leading a 50-student lab on Object-Oriented Programming; coordinating grading and deadlines with staff.
+    - Demonstrating live coding workflows using Git and IntelliJ to enhance student understanding of development environments.
   ]
 )
 
@@ -95,62 +115,48 @@
 #section-header("Projects")
 
 #resume-item(
-  title: "The Hive",
-  subtitle: "HTML, CSS, JS, Next.js, Tailwind, MongooseDB, Node.js",
-  date: "March 2022",
-  location: "",
-  content: [
-    #set list(marker: [•])
-    - Collaboratively developed a social media application for high school use.
-    - Used HTML/CSS/JS within Next.js; implemented Tailwind CSS for compact files.
-    - Utilized MongooseDB for database organization, storing user information with encryption.
-  ]
-)
-
-#resume-item(
-  title: "Discord Bot",
-  subtitle: "JavaScript, VS Code, GitHub",
-  date: "Aug 2025 - Present",
-  location: "",
-  content: [
-    #set list(marker: [•])
-    - Custom Discord bot made in JavaScript to organize and run my personal home server.
-    - Used Discord.js to develop commands to store, retrieve and manage NAS storage.
-  ]
-)
-
-#resume-item(
-  title: "Personal Portfolio",
-  subtitle: "HTML, CSS, JavaScript, VS Code, GitHub",
+  title: "Box-Notes",
+  subtitle: "React, Tailwind, Python, FastAPI, Postgres",
   date: "Present",
   location: "",
   content: [
     #set list(marker: [•])
-    - Developed a custom portfolio website to display creative skills, projects, and coursework.
+    - Developed a responsive personal note-taking application using React and Tailwind CSS.
+    - Implemented a high-performance backend with FastAPI and Postgres for efficient data storage.
   ]
 )
 
-// --- Skills ---
 
-#section-header("Technical Skills")
 
-#pad(top: 0.2em)[
-  *Languages & Tools:* HTML/CSS, Flask, C/C++, Firebase, Java, Power BI, DAX, Python, Git/GitHub, Vim, JavaScript, Next.js
-]
+#resume-item(
+  title: "Cooking App",
+  subtitle: "Next.js, FastAPI, MariaDB",
+  date: "Present",
+  location: "",
+  content: [
+    #set list(marker: [•])
+    - Led a 4-person team to ship a full-stack culinary app; architected the Next.js frontend and FastAPI backend.
+    - Managed Git version control, conflict resolution, and feature integration for the team.
+  ]
+)
 
-// --- Soft Skills ---
+#resume-item(
+  title: "WiseBot",
+  subtitle: "Python, Discord.py, Tailscale",
+  date: "Aug 2025 - Present",
+  location: "",
+  content: [
+    #set list(marker: [•])
+    - Created a Discord bot to automate home server media queries and management.
+    - Enabled secure remote management of Immich, Nginx-Paperless, and Jellyfin services via Tailscale.
+  ]
+)
 
-#pad(top: 0.2em)[
-  *Soft Skills:* Leadership, Collaboration, Team Management, Public Speaking, Problem-Solving, Project Management, Delegation
-]
-
-// --- Extracurricular ---
+// --- Extracurricular Leadership ---
 
 #section-header("Extracurricular Leadership")
 
-#pad(top: 0.2em)[
+#pad(top: 0em)[
   #set list(marker: [•])
-  - *ACM Programming Contest:* 2023 contestant and 2024 Judge.
-  - *eSports Officer (Secretary, 2023-2024):* Managed schedules for cabinet meetings and club room; tracked member count.
-  - *eSports Team Captain:* Led a team of five individuals; developed strategies and led during difficult situations.
+  - *eSports Officer (Secretary):* Managed cabinet schedules and tracked club membership growth (2023-2024).
 ]
