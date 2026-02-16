@@ -73,12 +73,13 @@
 #section-header("Experience")
 
 #resume-item(
-  title: "Raider Immersion Program - Booz Allen Hamilton",
+  title: "Raider Immersion Program,
   subtitle: "Year-round Intern",
   date: "Dec 2025 - Present",
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
+    - Working with Booz Allen Hamilton.
     - Developing a user-friendly graphical interface and Python workflow to integrate with open-source APIs for aerospace simulation.
     - Collaborating within a multidisciplinary team to validate model outputs and achieve technical milestones.
   ]
