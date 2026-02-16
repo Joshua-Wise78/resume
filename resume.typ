@@ -73,7 +73,7 @@
 #section-header("Experience")
 
 #resume-item(
-  title: "Raider Immersion Program,
+  title: "Raider Immersion Program",
   subtitle: "Year-round Intern",
   date: "Dec 2025 - Present",
   location: "Fairborn, Ohio",
@@ -100,7 +100,7 @@
 
 #resume-item(
   title: "Wright State University",
-  subtitle: "Teaching Assistant & Java III Lab Leader",
+  subtitle: "Teaching Assistant & Java I & II Lab Leader",
   date: "Aug 2024 - Present",
   location: "Fairborn, Ohio",
   content: [
