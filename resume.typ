@@ -1,22 +1,22 @@
 #set page(
   paper: "us-letter",
-  margin: (x: 0.5in, y: 0.5in),
+  margin: (x: 0.5in, y: 0.4in),
 )
 #set text(
   font: "Linux Libertine",
   size: 10pt,
   lang: "en"
 )
-#set par(leading: 0.5em)
+#set par(leading: 0.45em)
 
 // --- Helper Functions ---
 
 #let section-header(title) = {
-  v(8pt)
+  v(5pt)
   text(weight: "bold", size: 11pt, upper(title))
-  v(-6pt)
+  v(-5pt)
   line(length: 100%, stroke: 0.5pt)
-  v(4pt)
+  v(3pt)
 }
 
 #let resume-item(
@@ -26,14 +26,25 @@
   location: "",
   content: none
 ) = {
+  let left-content = text(weight: "bold", title)
+  if subtitle != "" {
+    left-content = left-content + " | " + text(style: "italic", weight: "regular", subtitle)
+  }
+
+  let right-content = []
+  if location != "" {
+    right-content = text(style: "italic", location) + " | "
+  }
+  right-content = right-content + date
+
   grid(
     columns: (1fr, auto),
-    row-gutter: 0em,
-    text(weight: "bold", title), align(right, date),
-    text(style: "italic", subtitle), align(right, text(style: "italic", location))
+    gutter: 0.5em,
+    left-content, align(right, right-content)
   )
+  
   if content != none {
-    pad(left: 0em, top: 0.2em, bottom: 0.2em, content)
+    pad(left: 0em, top: 0em, bottom: 0.2em, content)
   }
 }
 
@@ -73,15 +84,15 @@
 #section-header("Experience")
 
 #resume-item(
-  title: "Raider Immersion Program",
-  subtitle: "Year-round Intern",
+  title: "Wright State University",
+  subtitle: "Raider Immersion Intern",
   date: "Dec 2025 - Present",
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
-    - Working with Booz Allen Hamilton.
-    - Developing a user-friendly graphical interface and Python workflow to integrate with open-source APIs for aerospace simulation.
-    - Collaborating within a multidisciplinary team to validate model outputs and achieve technical milestones.
+    - Supporting Booz Allen's *missile modeling* and simulation team to develop and analyze dynamic and kinematic models of missiles and aircraft systems.
+    - Developing a user-friendly workflow and graphical interface that integrates with an open-source software API to verify program input and validate program output.
+    - Collaborating with a *multidisciplinary team* to ensure completion of delegated milestones, participating in standups to report progress and perform technical reviews.
   ]
 )
 
@@ -92,7 +103,7 @@
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
-    - Built a full-stack internship portal using Flask, HTML/JS, and Firebase; migrated data from Datastore to Firestore.
+    - Built a *full-stack* internship portal using Flask, HTML/JS, and Firebase; migrated data from Datastore to Firestore.
     - Managed internal datasets and developed Power BI dashboards with DAX to visualize operational costs and usage.
     - Automated data workflows to improve customer satisfaction and information accessibility.
   ]
@@ -101,12 +112,12 @@
 #resume-item(
   title: "Wright State University",
   subtitle: "Teaching Assistant & Java I & II Lab Leader",
-  date: "Aug 2024 - Present",
+  date: "Aug 2024 - Dec 2025",
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
-    - Lead a 50-student lab on Object-Oriented Programming; coordinate grading and deadlines with staff.
-    - Demonstrate live coding workflows using Git and IntelliJ to enhance student understanding of development environments.
+    - *Lead* a 50-student lab on *Object-Oriented Programming*; coordinate grading and deadlines with staff.
+    - Demonstrate live coding workflows using Git and IDEs to enhance student understanding of development environments.
   ]
 )
 
@@ -121,8 +132,8 @@
   location: "",
   content: [
     #set list(marker: [•])
-    - Led a 4-person team to ship a full-stack culinary app; architected the Next.js frontend and FastAPI backend.
-    - Managed Git version control, conflict resolution, and feature integration for the team.
+    - Led a 4-person team to ship a *full-stack* culinary app; architected the Next.js frontend and FastAPI backend.
+    - Managed Git version control, *conflict resolution*, and feature integration for the team.
   ]
 )
 
@@ -133,7 +144,7 @@
   location: "",
   content: [
     #set list(marker: [•])
-    - Created a Discord bot to automate home server media queries and management.
+    - Created a Discord bot to *automate* home server media queries and management.
     - Enabled secure remote management of Immich, Nginx-Paperless, and Jellyfin services via Tailscale.
   ]
 )
@@ -145,4 +156,5 @@
 #pad(top: 0em)[
   #set list(marker: [•])
   - *Wright State eSports:* Served as *Secretary* (2023-24) managing club logistics, and *Team Captain*, leading strategy for a 5-person competitive team.
+  - *Hackathon Participant:* Built a self-hosted software called *Box-Notes* to self-host and render markdown notes.
 ]
