@@ -161,5 +161,4 @@
   #set list(marker: [•])
   - *Lead Teaching Assistant* Worked as a teaching assistant for Java I & II leading labs for 3 semesters.
   - *Wright State eSports:* Served as *Secretary* (2023-24) managing club logistics, and *Team Captain*, leading strategy for a 5-person competitive team.
-  - *Hackathon Participant:* Built a self-hosted software called *Box-Notes* to self-host and render markdown notes.
 ]
