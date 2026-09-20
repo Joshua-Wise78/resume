@@ -91,8 +91,9 @@
   location: "Dayton, Ohio",
   content: [
     #set list(marker: [•])
-    - Develop solutions for multiple different clients. Represnting data in unique & useful ways.
-    - Working through an agile workflow going under multiple PRs & code discussions. 
+    - Programmatically build unique, tailored models to deliver customized solutions and individualized experiences per customer.
+    - Manipulate and transform complex datasets, representing data in actionable and client-specific ways.
+    - Collaborate within an agile workflow, actively participating in pull requests and code reviews.
   ]
 )
 
