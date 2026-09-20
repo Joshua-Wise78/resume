@@ -75,22 +75,36 @@
 #section-header("Technical Skills")
 
 #pad(top: 0em)[
-  *Languages:* Python, Java, C/C++, JavaScript, HTML/CSS, SQL, Bash \
-  *Frameworks & Tools:* React, Next.js, Flask, FastAPI, Git, Docker, Postgres, MariaDB, Firebase, Vim, Power BI
+  *Languages:* Python, Java, C/C++, Typescript, HTML/CSS, SQL, \
+  *Frameworks & Tools:* React, Next.js, Flask, FastAPI, Git, Docker, Postgres, MariaDB, Vim, Power BI
 ]
 
 // --- Experience ---
 
+
 #section-header("Experience")
+
+#resume-item(
+  title: "Tenet3 LLC",
+  subtitle: "Solutions Intern",
+  date: "March 2026 - Present",
+  location: "Dayton, Ohio",
+  content: [
+    #set list(marker: [•])
+    - Develop solutions for multiple different clients. Represnting data in unique & useful ways.
+    - Working through an agile workflow going under multiple PRs & code discussions. 
+  ]
+)
 
 #resume-item(
   title: "Wright State University",
   subtitle: "Raider Immersion Intern",
-  date: "Dec 2025 - Present",
+  date: "Dec 2025 - May 2026",
   location: "Fairborn, Ohio",
   content: [
     #set list(marker: [•])
-    - Supporting Booz Allen's *missile modeling* and simulation team to develop and analyze dynamic and kinematic models of missiles and aircraft systems.
+    - Supporting WSU Take Flight Academy building out training flight software.
+    - Supporting Booz Allen's *parametric missile modeling* and simulation team to develop and analyze dynamic and kinematic models of missiles and aircraft systems.
     - Developing a user-friendly workflow and graphical interface that integrates with an open-source software API to verify program input and validate program output.
     - Collaborating with a *multidisciplinary team* to ensure completion of delegated milestones, participating in standups to report progress and perform technical reviews.
   ]
@@ -109,43 +123,32 @@
   ]
 )
 
-#resume-item(
-  title: "Wright State University",
-  subtitle: "Teaching Assistant & Java I & II Lab Leader",
-  date: "Aug 2024 - Dec 2025",
-  location: "Fairborn, Ohio",
-  content: [
-    #set list(marker: [•])
-    - *Lead* a 50-student lab on *Object-Oriented Programming*; coordinate grading and deadlines with staff.
-    - Demonstrate live coding workflows using Git and IDEs to enhance student understanding of development environments.
-  ]
-)
-
 // --- Projects ---
 
 #section-header("Projects")
 
 #resume-item(
-  title: "Cooking App",
-  subtitle: "Next.js, FastAPI, MariaDB, GitHub",
-  date: "Present",
+  title: "Route 88",
+  subtitle: "Typescript, Flutter, Dart, ORSM, Docker, Postgres",
+  date: "December 2025 - Present",
   location: "",
   content: [
     #set list(marker: [•])
-    - Led a 4-person team to ship a *full-stack* culinary app; architected the Next.js frontend and FastAPI backend.
-    - Managed Git version control, *conflict resolution*, and feature integration for the team.
+    - Multi-service application based on a microservice architecutre.
+    - Managed Git version control, *conflict resolution*, and feature integrations.
+    - Team lead of 3 other students working on the *flutter* application using the microservice built.
   ]
 )
 
 #resume-item(
-  title: "WiseBot",
+  title: "The Men",
   subtitle: "Python, Discord.py, Tailscale",
   date: "Aug 2025 - Present",
   location: "",
   content: [
     #set list(marker: [•])
-    - Created a Discord bot to *automate* home server media queries and management.
-    - Enabled secure remote management of Immich, Nginx-Paperless, and Jellyfin services via Tailscale.
+    - Created a suite of Discord bots to *automate* home server media queries and management.
+    - Enabled secure remote management of Immich, and Jellyfin services via Tailscale.
   ]
 )
 
@@ -155,6 +158,7 @@
 
 #pad(top: 0em)[
   #set list(marker: [•])
+  - *Lead Teaching Assistant* Worked as a teaching assistant for Java I & II leading labs for 3 semesters.
   - *Wright State eSports:* Served as *Secretary* (2023-24) managing club logistics, and *Team Captain*, leading strategy for a 5-person competitive team.
   - *Hackathon Participant:* Built a self-hosted software called *Box-Notes* to self-host and render markdown notes.
 ]
